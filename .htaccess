@@ -1,0 +1,49 @@
+# ================================================================
+# MIDWESTERNBANK, N.A. — ONLINE BANKING SYSTEM
+# Root .htaccess — Security · Routing · Performance · Headers
+# ================================================================
+# DO NOT share, edit, or expose this file.
+# Any misconfiguration may create security vulnerabilities.
+# ================================================================
+
+# ──────────────────────────────────────────────
+# 1. ENGINE & OPTIONS
+# ──────────────────────────────────────────────
+Options -Indexes -MultiViews -ExecCGI
+Options +FollowSymLinks
+
+RewriteEngine On
+
+
+<IfModule mod_rewrite.c>
+
+    # ── PUBLIC PAGES ──
+    RewriteRule ^index$                  index.php [L]
+    RewriteRule ^about$                 about.php [L]
+    RewriteRule ^home-security$         home-security.php [L]
+    RewriteRule ^careers$               careers.php [L]
+    RewriteRule ^forget-password$     forget-password.php [L]
+
+    # ── AUTH PAGES ──
+    RewriteRule ^login$                login.php [L]
+    RewriteRule ^register$             register.php [L]
+    RewriteRule ^logout$               logout.php [L]
+   
+
+    # ── CUSTOMER BANKING PAGES ──
+    RewriteRule ^dashboard$         dashboard.php [L]
+    RewriteRule ^transactions$      transactions.php [L]
+    RewriteRule ^transfer$          transfer.php [L]
+    RewriteRule ^receive$           receive.php [L]
+    RewriteRule ^statements$        statements.php [L]
+    RewriteRule ^cards$             cards.php [L]
+    RewriteRule ^beneficiaries$     beneficiaries.php [L]
+    RewriteRule ^profile$           profile.php [L]
+    RewriteRule ^security$          security.php [L]
+    RewriteRule ^support$           support.php [L]
+    RewriteRule ^withdrawal$        withdrawal.php [L]
+
+
+    RewriteRule ^ - [L]
+
+</IfModule>

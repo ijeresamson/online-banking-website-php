@@ -1,0 +1,305 @@
+
+/** apps-section **/
+
+.apps-section{
+  position: relative;
+}
+
+.apps-section .inner-container{
+  position: relative;
+  display: block;
+  background: #F6F6F6;
+  padding: 80px 80px 80px 164px;
+}
+
+.apps-section .image-box{
+  position: relative;
+  display: block;
+  padding-right: 160px;
+  margin-right: 42px;
+}
+
+.apps-section .image-box img{
+  width: 100%;
+}
+
+.apps-section .image-box .image-2{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.apps-section .content-box{
+  position: relative;
+  display: block;
+}
+
+.apps-section .content-box .btn-box{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.apps-section .content-box .btn-box a{
+  position: relative;
+  display: inline-block;
+  background: var(--secondary-color);
+  padding: 11px 15px 11px 60px;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: var(--title-font);
+  font-weight: 700;
+  color: #fff;
+}
+
+.apps-section .content-box .btn-box a img{
+  position: absolute;
+  left: 14px;
+  top: 11px;
+}
+
+.apps-section .content-box .btn-box a span{
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.apps-section .content-box .btn-box a:hover{
+  background: var(--theme-color);
+}
+
+.apps-section .shape .shape-1{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 330px;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.apps-section .shape .shape-2{
+  position: absolute;
+  left: -105px;
+  top: 150px;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  -webkit-animation: zoom-fade 8s infinite linear;
+  animation: zoom-fade 8s infinite linear;
+  z-index: -1;
+}
+
+.apps-section .light-icon{
+  position: absolute;
+  right: 34px;
+  bottom: 138px;
+  width: 180px;
+  height: 142px;
+  background-repeat: no-repeat;
+}
+
+
+.apps-section.alternat-2{
+  background: var(--theme-color);
+  overflow: hidden;
+}
+
+.apps-section.alternat-2 .sec-title h6,
+.apps-section.alternat-2 p{
+  color: #fff !important;
+}
+
+.apps-section.alternat-2 .content-box .btn-box a{
+  background: var(--secondary-color) !important;
+}
+
+.apps-section.alternat-2 .image-layer .image-1{
+  position: absolute;
+  left: 310px;
+  bottom: -105px;
+}
+
+.apps-section.alternat-2 .image-layer .image-2{
+  position: absolute;
+  left: 560px;
+  bottom: -145px;
+}
+
+.apps-section.alternat-2 .pattern-layer .pattern-1{
+  position: absolute;
+  left: 210px;
+  top: 47px;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  -webkit-animation: zoom-fade 8s infinite linear;
+  animation: zoom-fade 8s infinite linear;
+}
+
+.apps-section.alternat-2 .pattern-layer .pattern-2{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+
+
+/** RTL **/
+
+
+.rtl .apps-section .image-box{
+  margin-right: 0px;
+  margin-left: 42px;
+}
+
+.rtl .apps-section .shape .shape-1{
+  left: inherit;
+  right: 0px;
+}
+
+.rtl .apps-section .inner-container{
+  padding-left: 80px;
+  padding-right: 164px;
+}
+
+.rtl .apps-section .content-box .btn-box a.mr_20{
+  margin-right: 0px;
+  margin-left: 20px;
+}
+
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1549px){
+  .apps-section.alternat-2 .image-layer .image-1{
+    left: 0px;
+  }
+
+  .apps-section.alternat-2 .image-layer .image-2{
+    left: 150px;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .apps-section.alternat-2 .image-layer{
+    display: none;
+  }
+
+  .apps-section .content-box{
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .apps-section .shape{
+    display: none;
+  }
+
+  .apps-section .image-box{
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  .rtl .apps-section .image-box{
+    margin-left: 0px;
+  }
+
+  .apps-section .inner-container{
+    padding-left: 80px;
+  }
+
+  .rtl .apps-section .inner-container{
+    padding-right: 80px;
+  }
+
+  .apps-section.alternat-2 .pattern-layer{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .apps-section{
+    padding: 70px 0px;
+  }
+
+  .apps-section.about-page{
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 599px){
+  .apps-section .inner-container,
+  .rtl .apps-section .inner-container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 499px){
+  .apps-section .image-box{
+    padding: 0px;
+  }
+
+  .apps-section .image-box .image-2{
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .apps-section .content-box .btn-box{
+    display: block;
+  }
+
+  .apps-section .content-box .btn-box a{
+    margin: 0px 0px 15px 0px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

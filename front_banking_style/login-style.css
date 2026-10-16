@@ -1,0 +1,564 @@
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: stretch;
+        background: #f0f2f5;
+    }
+
+
+    /* ============================================================
+       MAIN WRAPPER — same as register .signup-wrapper
+    ============================================================ */
+    .signin-wrapper {
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+
+    /* ============================================================
+       LEFT BRAND PANEL — identical to register brand-side
+    ============================================================ */
+    .brand-side {
+        flex: 0 0 45%;
+        background: linear-gradient(145deg, #0f0c29 0%, #1a1a2e 40%, #16213e 100%);
+        display: flex;
+        flex-direction: column;
+        padding: 48px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .brand-side::before {
+        content: '';
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        top: -120px;
+        right: -120px;
+    }
+
+    .brand-side::after {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        bottom: -80px;
+        left: -80px;
+    }
+
+    .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0.3px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .brand-logo i {
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(135deg, #4299e1, #2b6cb0);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .brand-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        padding: 48px 0;
+    }
+
+    .brand-content h1 {
+        font-size: 34px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.3;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .brand-content p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.75;
+        margin-bottom: 40px;
+        max-width: 380px;
+    }
+
+    .security-badge {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 18px 22px;
+        backdrop-filter: blur(10px);
+        margin-bottom: 28px;
+        max-width: 380px;
+    }
+
+    .security-badge i {
+        font-size: 30px;
+        color: #68d391;
+        flex-shrink: 0;
+    }
+
+    .security-badge strong {
+        display: block;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+
+    .security-badge span {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
+    }
+
+    .feature-list {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .feature-item i {
+        width: 22px;
+        height: 22px;
+        background: rgba(104, 211, 145, 0.15);
+        color: #68d391;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .brand-footer {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.3);
+        position: relative;
+        z-index: 1;
+    }
+
+
+    /* ============================================================
+       RIGHT FORM PANEL
+       No inner box — form fills the full panel like register page
+    ============================================================ */
+    .form-side {
+        flex: 1;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 80px;
+        overflow-y: auto;
+    }
+
+    .form-header {
+        margin-bottom: 36px;
+    }
+
+    .form-header h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 8px;
+        letter-spacing: -0.4px;
+    }
+
+    .form-header p {
+        font-size: 14px;
+        color: #718096;
+    }
+
+    .form-header a {
+        color: #2b6cb0;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .form-header a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* ============================================================
+       SECTION DIVIDER — same style as register page
+    ============================================================ */
+    .section-divider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #2d3748;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin: 28px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #edf2f7;
+    }
+
+    .section-divider i {
+        color: #2b6cb0;
+        font-size: 16px;
+    }
+
+
+    /* ============================================================
+       ALERT MESSAGES
+    ============================================================ */
+    .alert {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 18px;
+        border-radius: 10px;
+        margin-bottom: 28px;
+        font-size: 14px;
+        line-height: 1.6;
+        border: 1px solid transparent;
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-8px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .alert i {
+        font-size: 18px;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .alert-danger {
+        background: #fff5f5;
+        border-color: #fed7d7;
+        color: #c53030;
+    }
+
+    .alert-danger i { color: #e53e3e; }
+
+    .alert-success {
+        background: #f0fff4;
+        border-color: #c6f6d5;
+        color: #276749;
+    }
+
+    .alert-success i { color: #38a169; }
+
+    .alert-warning {
+        background: #fffbeb;
+        border-color: #fefcbf;
+        color: #b7791f;
+    }
+
+    .alert-warning i { color: #d69e2e; }
+
+
+    /* ============================================================
+       FORM GRID — same 2-column grid as register page
+    ============================================================ */
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .form-group label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 7px;
+        letter-spacing: 0.2px;
+    }
+
+    .form-group label span {
+        color: #e53e3e;
+    }
+
+    .input-wrapper {
+        position: relative;
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #a0aec0;
+        font-size: 16px;
+        pointer-events: none;
+    }
+
+    .form-control {
+        width: 100%;
+        height: 46px;
+        padding: 0 46px 0 42px;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 10px;
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+        color: #1a202c;
+        background: #fafafa;
+        outline: none;
+        transition: all 0.2s ease;
+    }
+
+    .form-control:focus {
+        border-color: #2b6cb0;
+        background: #ffffff;
+        box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.12);
+    }
+
+    .form-control.is-invalid {
+        border-color: #e53e3e;
+        box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+    }
+
+    .toggle-password {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #a0aec0;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 4px;
+        line-height: 1;
+        transition: color 0.2s;
+    }
+
+    .toggle-password:hover {
+        color: #4a5568;
+    }
+
+
+    /* ============================================================
+       FORM OPTIONS ROW (remember me + forgot password)
+    ============================================================ */
+    .form-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6px;
+    }
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: #4a5568;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .remember-me input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        accent-color: #2b6cb0;
+        cursor: pointer;
+    }
+
+    .forgot-pass {
+        font-size: 13px;
+        color: #2b6cb0;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
+
+    .forgot-pass:hover {
+        color: #1a365d;
+        text-decoration: underline;
+    }
+
+
+    /* ============================================================
+       SUBMIT BUTTON — same style as register page
+    ============================================================ */
+    .btn-submit {
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(135deg, #2b6cb0 0%, #1a365d 100%);
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        letter-spacing: 0.3px;
+        margin-top: 28px;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 14px rgba(43, 108, 176, 0.3);
+    }
+
+    .btn-submit:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(43, 108, 176, 0.4);
+    }
+
+    .btn-submit:active {
+        transform: translateY(0);
+    }
+
+    .btn-submit:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .btn-submit .spinner {
+        display: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+
+    /* ============================================================
+       SECURITY INFO FOOTER ROW
+    ============================================================ */
+    .security-info {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #edf2f7;
+    }
+
+    .security-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: #a0aec0;
+        font-weight: 500;
+    }
+
+    .security-item i {
+        font-size: 14px;
+        color: #68d391;
+    }
+
+
+    /* ============================================================
+       HELP LINK
+    ============================================================ */
+    .help-support {
+        font-size: 13px;
+        color: #718096;
+        margin-top: 18px;
+    }
+
+    .help-support a {
+        color: #2b6cb0;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .help-support a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 960px) {
+        .brand-side {
+            display: none;
+        }
+
+        .form-side {
+            padding: 48px 40px;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 560px) {
+        .form-side {
+            padding: 36px 24px;
+        }
+
+        .form-header h2 {
+            font-size: 22px;
+        }
+
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .security-info {
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }

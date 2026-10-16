@@ -1,0 +1,95 @@
+
+/** error-section **/
+
+.error-section{
+  position: relative;
+}
+
+.error-section .error-image{
+  position: relative;
+  display: block;
+  margin-bottom: 70px;
+}
+
+.error-section h2{
+  position: relative;
+  display: block;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+
+
+/** RTL **/
+
+
+
+
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 991px){
+
+}
+
+@media only screen and (max-width: 767px){
+  .error-section{
+    padding: 70px 0px;
+  }
+}
+
+@media only screen and (max-width: 599px){
+
+}
+
+@media only screen and (max-width: 499px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

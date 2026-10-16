@@ -1,0 +1,158 @@
+
+/** subscribe-section **/
+
+.subscribe-section{
+  position: relative;
+  padding: 58px 0px;
+  background: var(--theme-color);
+}
+
+.subscribe-section h2{
+  position: relative;
+  display: block;
+  font-size: 40px;
+  line-height: 52px;
+  color: #fff;
+  font-weight: 800;
+  max-width: 500px;
+}
+
+.subscribe-section .form-inner .form-group{
+  position: relative;
+  margin-bottom: 0px;
+  padding-right: 230px;
+}
+
+.subscribe-section .form-inner .form-group input[type="email"]{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid transparent;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 30px;
+  transition: all 500ms ease;
+}
+
+.subscribe-section .form-inner .form-group input[type="email"]:focus{
+  border-color: #fff;
+}
+
+.subscribe-section .form-inner .form-group .theme-btn{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 210px;
+}
+
+.subscribe-section .form-inner .form-group .theme-btn:before,
+.subscribe-section .form-inner .form-group .theme-btn:after{
+  background: #fff !important;
+}
+
+.subscribe-section .form-inner .form-group .theme-btn:hover{
+  color: var(--title-color) !important; 
+}
+
+.subscribe-section .pattern-layer{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+/** RTL **/
+
+
+
+
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 991px){
+  .subscribe-section h2{
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .subscribe-section .form-inner{
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .subscribe-section h2{
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (max-width: 599px){
+
+}
+
+@media only screen and (max-width: 499px){
+  .subscribe-section .form-inner .form-group{
+    padding-right: 0px;
+  }
+
+  .subscribe-section .form-inner .form-group .theme-btn{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

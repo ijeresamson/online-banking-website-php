@@ -1,0 +1,89 @@
+# ================================================================
+# MIDWESTERNBANK, N.A. — ADMIN CONTROL PANEL
+# admin/.htaccess — Strict Security · Access Control · Routing
+# ================================================================
+# This panel controls ALL banking operations.
+# Every directive here is critical — do not modify carelessly.
+# ================================================================
+
+# ──────────────────────────────────────────────
+# 1. ENGINE
+# ──────────────────────────────────────────────
+Options -Indexes -MultiViews -ExecCGI
+Options +FollowSymLinks
+RewriteEngine On
+
+
+
+
+# ──────────────────────────────────────────────
+# 12. ADMIN ROUTING — CLEAN URLS
+# ──────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+
+    # ── DASHBOARD ──
+    RewriteRule ^index$                          index.php [L]
+
+
+    # ── CUSTOMER MANAGEMENT ──
+  
+    RewriteRule ^customer-all$             customer-all.php [L]
+    RewriteRule ^add-customer$             add-customer.php [L]
+    RewriteRule ^customer-pending-kyc$     customer-pending-kyc.php [L]
+    RewriteRule ^customer-approved$        customer-approved.php [L]
+    RewriteRule ^customer-suspended$       customer-suspended.php [L]
+    RewriteRule ^customer-detail-([0-9]+)/?$ customer-detail.php?id=$1 [L,QSA]
+    RewriteRule ^edit-customer-([0-9]+)/?$   edit-customer.php?id=$1  [L,QSA]
+
+    
+
+    # ── ACCOUNTS ──
+    RewriteRule ^accounts-all$                  accounts-all.php [L]
+
+    # ── TRANSACTIONS ──
+    RewriteRule ^transactions-all$          transactions-all.php [L]
+
+    # ── TRANSFERS ──
+  
+    RewriteRule ^transfers-all$             transfers-all.php [L]
+    RewriteRule ^transfers-pending$         transfers-pending.php [L]
+    RewriteRule ^transfers-completed$       transfers-completed.php [L]
+
+    # ── FINANCES ──
+    RewriteRule ^deposit$                   deposit.php [L]
+    RewriteRule ^withdrawal$                withdrawal.php [L]
+  
+
+    # ── CARDS ──
+ 
+    RewriteRule ^cards-all$                 cards-all.php [L]
+    RewriteRule ^cards-requests$            cards-all.php?tab=requests [L]
+
+    # ── SUPPORT ──
+   
+    RewriteRule ^support-all$               support-all.php [L]
+    RewriteRule ^support-([0-9]+)$          support-all.php?view=$1 [L,QSA]
+
+    # ── SETTINGS ──
+    RewriteRule ^setting$                  setting.php [L]
+    RewriteRule ^profile$                  profile.php [L]
+
+    # ── AUTH ──
+    RewriteRule ^login$                     login.php [L]
+    RewriteRule ^admin-logout$              admin-logout.php [L]
+    RewriteRule ^forgot-password$           forget-password.php [L]
+    RewriteRule ^reset-password$            reset-password.php [L]
+
+    # ── KYC DOCUMENTS ──
+    RewriteRule ^kyc-view-document$              kyc-view-document.php [L,QSA]
+
+
+    RewriteRule ^ - [L]
+
+    # ── FALLBACK — redirect unknown admin URLs to dashboard ──
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [L,QSA]
+
+</IfModule>
+

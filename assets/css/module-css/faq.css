@@ -1,0 +1,195 @@
+
+/** faq-section **/
+
+.faq-section{
+  position: relative;
+  background: rgba(247, 247, 247, 1);
+}
+
+.accordion{
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(229, 229, 229, 1);
+  margin-bottom: 20px;
+}
+
+.accordion .acc-btn{
+  position: relative;
+  padding: 21px 60px 21px 40px;
+  cursor: pointer;
+}
+
+.accordion .acc-content{
+  padding: 8px 50px 30px 40px;
+}
+
+.accordion .acc-btn h4{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.accordion .acc-btn .icon-box{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: var(--title-color);
+  text-align: center;
+  border-radius: 50%;
+}
+
+.accordion .acc-btn .icon-box:before{
+  position: absolute;
+  content: '';
+  background: var(--theme-color);
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.accordion .acc-btn.active .icon-box:before{
+  opacity: 0.2;
+}
+
+.accordion .acc-btn .icon-box:after{
+  position: absolute;
+  content: '\e92c';
+  font-family: 'icomoon';
+  width: 30px;
+  left: 0px;
+}
+
+.accordion .acc-btn.active .icon-box:after{
+  content: '\e92d';
+}
+
+/** faq-form-section **/
+
+.faq-form-section{
+  position: relative;
+}
+
+.faq-form-section .form-inner{
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-form-section .form-inner .form-group{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.faq-form-section .form-inner .form-group:last-child{
+  margin-bottom: 0px;
+}
+
+.faq-form-section .form-inner .form-group input[type='text'],
+.faq-form-section .form-inner .form-group input[type='email'],
+.faq-form-section .form-inner .form-group textarea{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgba(229, 229, 229, 1);
+  font-size: 16px;
+  color: rgba(103, 103, 103, 1);
+  padding: 10px 30px;
+  transition: all 500ms ease;
+}
+
+.faq-form-section .form-inner .form-group textarea{
+  height: 170px;
+  resize: none;
+  padding-top: 15px;
+}
+
+.faq-form-section .form-inner .form-group input:focus,
+.faq-form-section .form-inner .form-group textarea:focus{
+  border-color: var(--theme-color);
+}
+
+
+
+/** RTL **/
+
+
+
+
+
+/** responsive-css **/
+
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 991px){
+
+}
+
+@media only screen and (max-width: 767px){
+  .faq-form-section{
+    padding: 70px 0px;
+  }
+
+  .faq-section{
+    padding: 70px 0px 50px 0px;
+  }
+}
+
+@media only screen and (max-width: 599px){
+
+}
+
+@media only screen and (max-width: 499px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

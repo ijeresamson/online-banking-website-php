@@ -1,0 +1,24 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 12 Aug 2026 02:07:11 at https://azim.hostlin.com/Metrobank/index-onepage.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://azim.hostlin.com/Metrobank/index-onepage.html -O1 "C:\My Web Sites\ban" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-brands-400.svg (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-light-300.eot (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-light-300.eot? (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-light-300.ttf (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-light-300.svg (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-regular-400.ttf (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-regular-400.svg (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-solid-900.eot (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-solid-900.eot? (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-solid-900.ttf (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/fonts/fa-solid-900.svg (from https://azim.hostlin.com/Metrobank/assets/css/font-awesome-all.css)
+02:08:25	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/assets/css/owl.video.play.png (from https://azim.hostlin.com/Metrobank/assets/css/owl.css)
+02:08:36	Error: 	"Not Found" (404) at link https://azim.hostlin.com/Metrobank/blog-detail.html (from https://azim.hostlin.com/Metrobank/blog-details.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 25 seconds : 267 links scanned, 253 files written (15884058 bytes overall) [13520465 bytes received at 159064 bytes/sec], 3561011 bytes transferred using HTTP compression in 89 files, ratio 30%, 26.7 requests per connection
+(13 errors, 0 warnings, 0 messages)

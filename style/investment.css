@@ -1,0 +1,516 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: #1f2937;
+      display: flex;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* --- Sidebar --- */
+    .sidebar {
+      width: 240px;
+      background: #ffffff;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid #e5e7eb;
+      z-index: 300;
+      transition: transform 0.3s ease-in-out;
+      flex-shrink: 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 700;
+      color: #3b28cc;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    .close-sidebar-btn {
+      display: none;
+      font-size: 20px;
+      color: #6b7280;
+      cursor: pointer;
+    }
+
+    .nav-section {
+      margin-bottom: 24px;
+    }
+
+    .nav-section label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #9ca3af;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+      padding-left: 12px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      color: #6b7280;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 8px;
+      margin-bottom: 4px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-item-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      background: #f0edff;
+      color: #5b32e4;
+    }
+
+    .nav-item.active i {
+      color: #5b32e4;
+    }
+
+    /* Upgrade Banner */
+    .upgrade-card {
+      background: linear-gradient(135deg, #ffd080 0%, #ffab38 100%);
+      padding: 16px;
+      border-radius: 12px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .upgrade-card h4 {
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #4a2800;
+    }
+
+    .upgrade-card p {
+      font-size: 11px;
+      color: #663d00;
+      margin-bottom: 12px;
+    }
+
+    .upgrade-card button {
+      background: #ffffff;
+      color: #ff9100;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Mobile Backdrop Overlay */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 250;
+    }
+
+    /* --- Main Layout --- */
+    .main-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* Header Panel */
+    .top-header {
+      background: linear-gradient(90deg, #4c28b5 0%, #6830cc 40%, #7d3ccf 100%);
+      color: white;
+      padding: 20px 32px 80px 32px;
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-box {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 260px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 13px;
+      width: 100%;
+    }
+
+    .search-box input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .user-profile-wrapper {
+      position: relative;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    .user-profile:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header-links-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-link {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .header-link.active {
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ffab38;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    /* Profile Dropdown Menu */
+    .dropdown-menu {
+      position: absolute;
+      top: 110%;
+      right: 0;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      width: 180px;
+      padding: 8px 0;
+      display: none;
+      flex-direction: column;
+      z-index: 400;
+    }
+
+    .dropdown-menu.show {
+      display: flex;
+    }
+
+    .dropdown-item {
+      padding: 10px 16px;
+      color: #374151;
+      font-size: 13px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dropdown-item:hover {
+      background: #f3f4f6;
+      color: #5b32e4;
+    }
+
+    /* Main Container */
+    .dashboard-container {
+      padding: 0 32px 32px 32px;
+      margin-top: -60px;
+    }
+
+    /* --- INVESTMENTS PAGE SPECIFIC STYLES --- */
+    .investment-summary-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      border-left: 5px solid #3b28cc;
+    }
+
+    .metric-item label {
+      font-size: 12px;
+      color: #6b7280;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .metric-item h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .badge-positive {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #16a34a;
+      background: #dcfce7;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-top: 4px;
+    }
+
+    .invest-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+
+    .section-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Portfolio Allocation Bar */
+    .allocation-bar-container {
+      margin-bottom: 24px;
+    }
+
+    .allocation-bar {
+      height: 12px;
+      border-radius: 6px;
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 12px;
+      background: #f3f4f6;
+    }
+
+    .bar-stocks { width: 55%; background: #3b28cc; }
+    .bar-crypto { width: 20%; background: #06b6d4; }
+    .bar-bonds { width: 15%; background: #10b981; }
+    .bar-cash { width: 10%; background: #f59e0b; }
+
+    .allocation-legend {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* Table Styles for Holdings */
+    .holdings-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .holdings-table th {
+      text-align: left;
+      font-size: 11px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .holdings-table td {
+      padding: 14px 0;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 13px;
+      color: #111827;
+    }
+
+    .holdings-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .asset-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .asset-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #3b28cc;
+    }
+
+    /* Market Watchlist Cards */
+    .watchlist-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .watchlist-item:last-child {
+      border-bottom: none;
+    }
+
+    .btn-trade {
+      background: #f0edff;
+      color: #5b32e4;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-trade:hover {
+      background: #3b28cc;
+      color: white;
+    }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 960px) {
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .sidebar-overlay.active {
+        display: block;
+      }
+
+      .close-sidebar-btn, .mobile-menu-btn {
+        display: block;
+      }
+
+      .investment-summary-card {
+        grid-template-columns: 1fr;
+      }
+
+      .invest-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .allocation-legend {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .search-box {
+        width: 180px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-header {
+        padding: 16px 16px 70px 16px;
+      }
+
+      .dashboard-container {
+        padding: 0 16px 20px 16px;
+      }
+
+      .search-box {
+        display: none;
+      }
+
+      .user-profile span:not(.avatar) {
+        display: none;
+      }
+
+      .holdings-table th:nth-child(2),
+      .holdings-table td:nth-child(2) {
+        display: none;
+      }
+    }
